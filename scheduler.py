@@ -8,7 +8,7 @@ def hourJob():
 
 if __name__ == '__main__':    
     scheduler = BlockingScheduler()
-    scheduler.add_job(hourJob, 'interval', minutes=5)
+    scheduler.add_job(hourJob, 'interval', minutes=30)
     print("===================scheduler started...")
     scheduler.start()
 
