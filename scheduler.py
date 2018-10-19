@@ -6,8 +6,10 @@ def hourJob():
     content = simple_get(url)
     print(get_price(content))
 
-scheduler = BlockingScheduler()
-scheduler.add_job(yayBoi, 'interval', minutes=5)
-scheduler.start()
+if __name__ == '__main__':    
+    scheduler = BlockingScheduler()
+    scheduler.add_job(hourJob, 'interval', minutes=5)
+    print("===================scheduler started...")
+    scheduler.start()
 
 
