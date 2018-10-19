@@ -16,7 +16,6 @@ def simple_get(url):
 
 
 def is_good(resp):
-    print resp
     content_type = resp.headers['Content-type'].lower()
     if resp.status_code == 200 and content_type.find('html') > -1:
         return True
